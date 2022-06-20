@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    // Erstellt die Klasse: Buch
+    class Buch{
+        constructor(Name, Seiten, Verleger, ISBN, Anzahl) {
+            this.Name=Name
+            this.Seiten=Seiten
+            this.Verleger=Verleger
+            this.ISBN=ISBN
+            this.Anzahl=Anzahl
+        }
+        // Prüft die Verfügbarkeit der jeweiligen Bücher
+        verfuegbar(){
+            if (this.Anzahl > 0){
+                console.log("Verfügbar");
+            }
+            if (this.Anzahl === 0) {
+                console.log("nicht Verfügbar");
+            }
+
+        }
+        // Prüft die verkauften Bücher (dementsprechend Buch -1)
+        verkauft(){
+
+        }
+
+    }
+
+
+
+</script>
+</body>
+</html>
