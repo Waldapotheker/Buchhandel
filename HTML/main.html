@@ -9,12 +9,13 @@
 
     // Erstellt die Klasse: Buch
     class Buch{
-        constructor(Name, Seiten, Verleger, ISBN, Anzahl) {
+        constructor(Name, Seiten, Verleger, ISBN, Anzahl, Preis) {
             this.Name=Name
             this.Seiten=Seiten
             this.Verleger=Verleger
             this.ISBN=ISBN
             this.Anzahl=Anzahl
+            this.Preis=Preis
         }
         // Prüft die Verfügbarkeit der jeweiligen Bücher
         verfuegbar(){
@@ -34,11 +35,28 @@
 
     }
 
-    new Buch("Herr der Ringe","200","Kopp Verlag","746GH64J","10")
-    new Buch("Stasi-Goreng","50","SED Verlag","658GGJU83F","20")
+    //Array fungiert als Lager
+
+    let lager = [];
+
+    //Funktion fügt neues Buch in das Array "lager" ein
+
+    function init(){
+        let buch = new Buch("Es","246","Klett","3693GF5","10","20€")
+        lager.push(buch)
+        buch = new Buch("Mein Kampf","133","Kopp-Verlag","873HJH5","5","88€")
+        lager.push(buch)
+        buch = new Buch("Manifest der kommunistischen Partei","23","Dietz-Verlag","1848ZG6","8","free")
+        lager.push(buch)
+        buch = new Buch("Shining","90","Klett","345ZZF8","13","15€")
+        lager.push(buch)
+
+    }
+console.log(lager,init())
 
 
 
 </script>
+
 </body>
 </html>
